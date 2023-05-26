@@ -129,10 +129,10 @@ const Index = () => {
   return (
     <Container>
       <Heading>
-        Welcome to <Span>template-snap</Span>
+        Welcome to <Span>crypto-roundups</Span>
       </Heading>
       <Subtitle>
-        Get started by editing <code>src/index.ts</code>
+        Roundup gas fees on every transaction!
       </Subtitle>
       <CardContainer>
         {state.error && (
@@ -185,9 +185,9 @@ const Index = () => {
         )}
         <Card
           content={{
-            title: 'Send Hello message',
+            title: 'Test Roundup',
             description:
-              'Display a custom message within a confirmation screen in MetaMask.',
+              'Execute function with no code to test roundup is working.',
             button: (
               <SendHelloButton
                 onClick={handleSendHelloClick}
@@ -204,10 +204,10 @@ const Index = () => {
         />
         <Notice>
           <p>
-            Please note that the <b>snap.manifest.json</b> and{' '}
-            <b>package.json</b> must be located in the server root directory and
-            the bundle must be hosted at the location specified by the location
-            field.
+            crypto-roundup rounds up the gas fees on every transaction.
+            This is then used to automatically purchase a defined token,
+            allowing users to slowly average into a crypto of their choosing
+            over a period of time rather than in bulk purchases.
           </p>
         </Notice>
       </CardContainer>
