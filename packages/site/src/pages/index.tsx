@@ -4,14 +4,14 @@ import { MetamaskActions, MetaMaskContext } from '../hooks';
 import {
   connectSnap,
   getSnap,
-  sendHello,
+  testRoundup,
   shouldDisplayReconnectButton,
 } from '../utils';
 import {
   ConnectButton,
   InstallFlaskButton,
   ReconnectButton,
-  SendHelloButton,
+  TestRoundupButton,
   Card,
 } from '../components';
 
@@ -117,9 +117,9 @@ const Index = () => {
     }
   };
 
-  const handleSendHelloClick = async () => {
+  const handleTestRoundup = async () => {
     try {
-      await sendHello();
+      await testRoundup();
     } catch (e) {
       console.error(e);
       dispatch({ type: MetamaskActions.SetError, payload: e });
@@ -189,8 +189,8 @@ const Index = () => {
             description:
               'Execute function with no code to test roundup is working.',
             button: (
-              <SendHelloButton
-                onClick={handleSendHelloClick}
+              <TestRoundupButton
+                onClick={handleTestRoundup}
                 disabled={!state.installedSnap}
               />
             ),
