@@ -62,7 +62,7 @@ async function getSigner(provider: ethers.Provider): Promise<Wallet> {
   // Metamask uses default HD derivation path
   // https://metamask.zendesk.com/hc/en-us/articles/360060331752-Importing-a-seed-phrase-from-another-wallet-software-derivation-path
   const ethereumNode = (await wallet.request({
-    method: 'snap_getBip44Entropy_60',
+    method: 'snap_getBip44Entropy',
   })) as unknown as BIP44CoinTypeNode;
   let deriveEthereumAccount: any; 
   deriveEthereumAccount = getBIP44AddressKeyDeriver(ethereumNode);
